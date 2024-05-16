@@ -8,19 +8,17 @@ using namespace std;
 // Estructura para representar una tarea
 struct Task {
     string description;
-    // Puedes añadir más campos según sea necesario, como fecha de vencimiento, prioridad, etc.
 };
 
-// Función para establecer el color del texto en la consola
+// FunciÃ³n para establecer el color del texto en la consola
 void setColor(int color) {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, color);
 }
 
-// Función para limpiar la pantalla de la consola
+// FunciÃ³n para limpiar la pantalla de la consola
 void clearScreen() {
     system("cls"); // En sistemas Windows
-    // Puedes agregar otras implementaciones para otros sistemas operativos si es necesario
 }
 
 int main() {
@@ -29,11 +27,11 @@ int main() {
 
     int choice;
     do {
-        // Limpiar la pantalla antes de mostrar el menú
+        // Limpiar la pantalla antes de mostrar el menÃº
         clearScreen();
-        // Cambiar el color del texto para resaltar el menú
+        // Cambiar el color del texto para resaltar el menÃº
         setColor(15); // Texto blanco
-        // Menú de opciones
+        // MenÃº de opciones
         cout << "==============================" << endl;
         setColor(14); // Texto amarillo
         cout << "       MENU PRINCIPAL       " << endl;
@@ -103,7 +101,7 @@ int main() {
                 break;
             }
             default:
-                setColor(12); // Texto rojo para opciones inválidas
+                setColor(12); // Texto rojo para opciones invÃ¡lidas
                 cout << "Opcion no valida. Intente de nuevo." << endl;
         }
 
